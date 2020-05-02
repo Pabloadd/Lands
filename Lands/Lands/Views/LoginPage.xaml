@@ -10,93 +10,104 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
-            Padding="10,20,10,5">
+                Padding="5">
                 <Label Text="Login" 
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="Black"/>
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="Black"/>
                 <Image
-                Source="nonameicon"
-                WidthRequest="160"/>
+                    Source="nonameicon"
+                    WidthRequest="160"/>
                 <Grid
-                Margin="0,20">
+                    VerticalOptions="CenterAndExpand">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
-                        Width="*"/>
+                            Width="*"/>
                         <ColumnDefinition
-                        Width="2*"/>
+                            Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    TextColor="Black"
-                    VerticalOptions="Center"
-                    Text="Email" />
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        Text="Email" />
                     <Entry
-                    Placeholder="ejemplo@mail.com"
-                    Keyboard="Email"
-                    Grid.Row="0"
-                    Grid.Column="1"/>
+                        Placeholder="ejemplo@mail.com"
+                        Keyboard="Email"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
 
                     <Label 
-                    Text="Contrasena"
-                    TextColor="Black"
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    VerticalOptions="Center"/>
+                        Text="Contrasena"
+                        TextColor="Black"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalOptions="Center"/>
                     <Entry
-                    Placeholder="0000000000"
-                    IsPassword="True"
-                    Grid.Row="1"
-                    Grid.Column="1"/>
+                        Placeholder="0000000000"
+                        IsPassword="True"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
                 </Grid>
-                <StackLayout
-                Orientation="Horizontal">
-                    <Label
-                    TextColor="Black"
-                    Text="Mantener sesion"
-                    VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand"/>
-                    <Switch
-                    HorizontalOptions="End"/>
-                </StackLayout>
 
-                <ActivityIndicator >
+                <ActivityIndicator 
+                    VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
 
                 <StackLayout
-                Margin="40,0"
-                Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        TextColor="Black"
+                        Text="Mantener sesion"
+                        VerticalOptions="Center"
+                        HorizontalOptions="StartAndExpand"/>
+                    <Switch
+                        HorizontalOptions="End"/>
+                </StackLayout>
+
+                <Label
+                    Text="Olvido su contrasena?"
+                    TextColor="Blue"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+
+                <StackLayout
+                    Margin="40,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
                     <Button
-                    Text="Login"
-                    BackgroundColor="BlueViolet"
-                    TextColor="White"
-                    CornerRadius="23"
-                    HeightRequest="46"
-                    HorizontalOptions="FillAndExpand"/>
+                        Text="Login"
+                        BackgroundColor="BlueViolet"
+                        TextColor="White"
+                        CornerRadius="23"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"/>
 
                     <Button
-                    Text="Registrarse"
-                    BackgroundColor="Bisque"
-                    TextColor="Black"
-                    CornerRadius="23"
-                    HeightRequest="46"
-                    HorizontalOptions="FillAndExpand"/>
+                        Text="Registrarse"
+                        BackgroundColor="Bisque"
+                        TextColor="Black"
+                        CornerRadius="23"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
                 <StackLayout
-                Orientation="Horizontal"
-                HorizontalOptions="Center">
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand">
                     <Image
-                    Source="facebook_logo"
-                    WidthRequest="100"/>
+                        Source="facebook_logo"
+                        WidthRequest="100"/>
                     <Image
-                    Source="instagram_logo"
-                    WidthRequest="80"/>
+                        Source="instagram_logo"
+                        WidthRequest="80"/>
                     <Image
-                    Source="twitter_logo"
-                    WidthRequest="100"/>
+                        Source="twitter_logo"
+                        WidthRequest="100"/>
                 </StackLayout>
 
             </StackLayout>
