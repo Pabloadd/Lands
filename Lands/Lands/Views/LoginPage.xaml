@@ -8,7 +8,8 @@
              Title="Login"
              BindingContext="{Binding Main,Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BindingContext="{Binding Login}">
             <StackLayout
                 Padding="5">
                 <Label Text="Login" 
@@ -37,7 +38,8 @@
                         Placeholder="ejemplo@mail.com"
                         Keyboard="Email"
                         Grid.Row="0"
-                        Grid.Column="1"/>
+                        Grid.Column="1"
+                        Text="{Binding Email, Mode=TwoWay}"/>
 
                     <Label 
                         Text="Contrasena"
@@ -49,11 +51,13 @@
                         Placeholder="0000000000"
                         IsPassword="True"
                         Grid.Row="1"
-                        Grid.Column="1"/>
+                        Grid.Column="1"
+                        Text="{Binding Password, Mode=TwoWay}"/>
                 </Grid>
 
                 <ActivityIndicator 
-                    VerticalOptions="CenterAndExpand">
+                    VerticalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsRuning, Mode=TwoWay}">
                 </ActivityIndicator>
 
                 <StackLayout
@@ -65,7 +69,8 @@
                         VerticalOptions="Center"
                         HorizontalOptions="StartAndExpand"/>
                     <Switch
-                        HorizontalOptions="End"/>
+                        HorizontalOptions="End"
+                        IsToggled="{Binding IsRemembered, Mode=TwoWay}"/>
                 </StackLayout>
 
                 <Label
@@ -84,7 +89,8 @@
                         TextColor="White"
                         CornerRadius="23"
                         HeightRequest="46"
-                        HorizontalOptions="FillAndExpand"/>
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding LoginCommand}"/>
 
                     <Button
                         Text="Registrarse"
