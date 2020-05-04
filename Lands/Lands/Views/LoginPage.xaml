@@ -90,7 +90,8 @@
                         CornerRadius="23"
                         HeightRequest="46"
                         HorizontalOptions="FillAndExpand"
-                        Command="{Binding LoginCommand}"/>
+                        Command="{Binding LoginCommand}"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"/>
 
                     <Button
                         Text="Registrarse"
@@ -98,7 +99,8 @@
                         TextColor="Black"
                         CornerRadius="23"
                         HeightRequest="46"
-                        HorizontalOptions="FillAndExpand"/>
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"/>
                 </StackLayout>
 
                 <StackLayout
