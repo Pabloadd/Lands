@@ -147,4 +147,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\twitter_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_chevron_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_translation.png" />
+  </ItemGroup>
 </Project>

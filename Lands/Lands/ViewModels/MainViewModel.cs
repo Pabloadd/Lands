@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+
 using System.Linq;
 using System.Text;
 
@@ -7,6 +7,8 @@ using Xamarin.Forms;
 
 namespace Lands.ViewModels
 {
+    using System.Collections.Generic;
+    using Models;
     public class MainViewModel 
     {
         #region constructor
@@ -19,7 +21,10 @@ namespace Lands.ViewModels
 
         #region ViewModels
         public LoginViewModel Login { get; set; }
+        
         public LandsViewModel Lands { get; set; }
+
+        public LandViewModel Land { get; set; }
         #endregion
 
         #region Singleton
@@ -32,6 +37,14 @@ namespace Lands.ViewModels
                 instance = new MainViewModel();
             }
             return instance;
+        }
+        #endregion
+
+        #region Properties
+        public List<Land> LandsList
+        { 
+            get; 
+            set; 
         }
         #endregion
     }

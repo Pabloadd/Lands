@@ -116,7 +116,7 @@ namespace Lands.ViewModels
 
             this.Email = string.Empty;
             this.password = string.Empty;
-
+            
             MainViewModel.GetInstance().Lands = new LandsViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
 
