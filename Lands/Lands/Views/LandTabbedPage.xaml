@@ -5,9 +5,10 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:tabs="clr-namespace:Lands.Views" 
+    xmlns:i18n="clr-namespace:Lands.Helpers"
     mc:Ignorable="d"
     x:Class="Lands.Views.LandTabbedPage"
-    Title="Land">
+    Title="{i18n:Translate Info}">
     
     <TabbedPage.Children>
         <tabs:LandPage/>

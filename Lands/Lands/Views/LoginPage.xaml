@@ -2,21 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:i18n="clr-namespace:Lands.Helpers"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Lands.Views.LoginPage"
-             Title="Login"
+             Title="{i18n:Translate Login}"
              BindingContext="{Binding Main,Source={StaticResource Locator}}">
     <ContentPage.Content>
         <ScrollView
             BindingContext="{Binding Login}">
             <StackLayout
                 Padding="5">
-                <Label Text="Login" 
-                       FontSize="Large"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       TextColor="Black"/>
+                
                 <Image
                     Source="nonameicon"
                     WidthRequest="160"/>
@@ -33,22 +30,22 @@
                         Grid.Column="0"
                         TextColor="Black"
                         VerticalOptions="Center"
-                        Text="Email" />
+                        Text="{i18n:Translate Email}" />
                     <Entry
-                        Placeholder="ejemplo@mail.com"
+                        Placeholder="{i18n:Translate EmailPlaceHolder}"
                         Keyboard="Email"
                         Grid.Row="0"
                         Grid.Column="1"
                         Text="{Binding Email, Mode=TwoWay}"/>
 
                     <Label 
-                        Text="Contrasena"
+                        Text="{i18n:Translate Password}"
                         TextColor="Black"
                         Grid.Row="1"
                         Grid.Column="0"
                         VerticalOptions="Center"/>
                     <Entry
-                        Placeholder="0000000000"
+                        Placeholder="{i18n:Translate PasswordPlaceHolder}"
                         IsPassword="True"
                         Grid.Row="1"
                         Grid.Column="1"
@@ -65,7 +62,7 @@
                     VerticalOptions="CenterAndExpand">
                     <Label
                         TextColor="Black"
-                        Text="Mantener sesion"
+                        Text="{i18n:Translate Rememberme}"
                         VerticalOptions="Center"
                         HorizontalOptions="StartAndExpand"/>
                     <Switch
@@ -74,7 +71,7 @@
                 </StackLayout>
 
                 <Label
-                    Text="Olvido su contrasena?"
+                    Text="{i18n:Translate Forgot}"
                     TextColor="Blue"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"/>
@@ -84,7 +81,7 @@
                     Orientation="Horizontal"
                     VerticalOptions="CenterAndExpand">
                     <Button
-                        Text="Login"
+                        Text="{i18n:Translate Login}"
                         BackgroundColor="BlueViolet"
                         TextColor="White"
                         CornerRadius="23"
@@ -94,7 +91,7 @@
                         IsEnabled="{Binding IsEnabled, Mode=TwoWay}"/>
 
                     <Button
-                        Text="Registrarse"
+                        Text="{i18n:Translate Register}"
                         BackgroundColor="Bisque"
                         TextColor="Black"
                         CornerRadius="23"
