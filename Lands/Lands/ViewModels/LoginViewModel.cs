@@ -112,60 +112,67 @@ namespace Lands.ViewModels
                 return;
             }
 
+            #region Code login with services
             /*var connection = await this.apiService.CheckConnection();
-            if (!connection.IsSuccess)
-            {
-                this.IsRuning = false;
-                this.IsEnabled = true;
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    connection.Message,
-                    "Aceptar");
-                return;
-            }
-
-            var token = await this.apiService.GetToken(
-            "", 
-            this.Email, 
-            this.Password);
-            
-             if(token == null)
-             {
-                this.IsRuning = false;
-                this.IsEnabled = true;
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Somthing were wrong, please try again",
-                    "Aceptar");
+                if (!connection.IsSuccess)
+                {
+                    this.IsRuning = false;
+                    this.IsEnabled = true;
+                    await Application.Current.MainPage.DisplayAlert(
+                        "Error",
+                        connection.Message,
+                        "Aceptar");
                     return;
-             }
-             
-             if(string.IsNullOrEmpty(token.AccessToken))
-             {
-                this.IsRuning = false;
-                this.IsEnabled = true;
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    token.ErrorDescription,
-                    "Aceptar");
-                this.Password = string.Empty;
-                return;
-             }
-             
-             var  mainViewModel = MainViewModel.GetInstance();
-             mainViewModel.Token = token;
-             mainViewModel.Lands = new LandsViewModel();
-             await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());*/
+                }
+
+                var token = await this.apiService.GetToken(
+                "", 
+                this.Email, 
+                this.Password);
+
+                 if(token == null)
+                 {
+                    this.IsRuning = false;
+                    this.IsEnabled = true;
+                    await Application.Current.MainPage.DisplayAlert(
+                        "Error",
+                        "Somthing were wrong, please try again",
+                        "Aceptar");
+                        return;
+                 }
+
+                 if(string.IsNullOrEmpty(token.AccessToken))
+                 {
+                    this.IsRuning = false;
+                    this.IsEnabled = true;
+                    await Application.Current.MainPage.DisplayAlert(
+                        "Error",
+                        token.ErrorDescription,
+                        "Aceptar");
+                    this.Password = string.Empty;
+                    return;
+                 }
+
+                 var  mainViewModel = MainViewModel.GetInstance();
+                 mainViewModel.Token = token;
+                 mainViewModel.Lands = new LandsViewModel();
+                 await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());*/ 
+            #endregion
 
             this.IsRuning = false;
             this.IsEnabled = true;
 
             this.Email = string.Empty;
             this.password = string.Empty;
-            
-            MainViewModel.GetInstance().Lands = new LandsViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
 
+            var mainViewModel = MainViewModel.GetInstance();
+            //mainViewModel.Token = Token;
+            mainViewModel.Lands = new LandsViewModel();
+            Application.Current.MainPage = new MasterPage();
+            
+           /* MainViewModel.GetInstance().Lands = new LandsViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
+            */
 
         }
         #endregion

@@ -195,6 +195,15 @@
   <data name="Login" xml:space="preserve">
     <value>Conecte-se</value>
   </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Cardápio</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Meu Perfil</value>
+  </data>
   <data name="NativeName" xml:space="preserve">
     <value>Nome nativo</value>
   </data>
@@ -233,6 +242,9 @@
   </data>
   <data name="Spanish" xml:space="preserve">
     <value>Espanhol</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Estatisticas</value>
   </data>
   <data name="Subregion" xml:space="preserve">
     <value>Sub-região</value>

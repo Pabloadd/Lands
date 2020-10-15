@@ -181,4 +181,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\ic_translation.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_exit.png" />
+  </ItemGroup>
 </Project>

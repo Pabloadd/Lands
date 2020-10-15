@@ -8,7 +8,9 @@ using Xamarin.Forms;
 namespace Lands.ViewModels
 {
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using Models;
+    using Helpers;
     public class MainViewModel 
     {
         #region constructor
@@ -16,6 +18,7 @@ namespace Lands.ViewModels
         {
             instance = this;
             this.Login = new LoginViewModel();
+            this.LoadMenu();
         } 
         #endregion
 
@@ -51,6 +54,40 @@ namespace Lands.ViewModels
         {
             get;
             set;
+        }
+
+        public ObservableCollection<MenuItemViewModel> Menus 
+        { 
+            get; 
+            set; 
+        }
+        #endregion
+
+        #region Methods
+        private void LoadMenu()
+        {
+            this.Menus = new ObservableCollection<MenuItemViewModel>();
+            
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_account",
+                PageName = "MyProfilePage",
+                Title = Languages.MyProfile,
+            });
+
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_chart",
+                PageName = "StatisticsPage",
+                Title = Languages.Statistics,
+            });
+
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_exit",
+                PageName = "LoginPage",
+                Title = Languages.Logout,
+            });
         }
         #endregion
     }
